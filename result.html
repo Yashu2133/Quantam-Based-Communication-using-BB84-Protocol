@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-3">
+        <h1>Quantum Cryptography Results</h1>
+    </header>
+
+    <main class="container my-5">
+        <h2 class="text-center">Operation Results</h2>
+        <div class="alert alert-info">
+            <strong>Original Message:</strong> {{ original_message }}
+        </div>
+        <div class="alert alert-success">
+            <strong>Ciphered Message:</strong> {{ ciphered_message }}
+        </div>
+        <div class="alert alert-warning">
+            <strong>Decrypted Message:</strong> {{ decrypted_message }}
+        </div>
+
+        <h3>Quantum Key Exchange Details</h3>
+        <p><strong>Secret Key:</strong> {{ secret_key }}</p>
+        <p><strong>Polarization Table:</strong> {{ polarization_table }}</p>
+        <p><strong>Filtration Table:</strong> {{ filtration_table }}</p>
+        <p><strong>Measured Values:</strong> {{ measured_values }}</p>
+        <p><strong>Final Key:</strong> {{ final_key }}</p>
+
+        <a href="/" class="btn btn-primary">Go Back Home</a>
+    </main>
+
+    <footer class="text-center py-4 bg-dark text-white">
+        <p>&copy; 2024 Quantum Encryption</p>
+    </footer>
+</body>
+</html>
